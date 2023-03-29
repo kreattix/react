@@ -28,7 +28,6 @@ jobs:
       - name: Coveralls GitHub Action
         uses: coverallsapp/github-action@v2.0.0
 
-
       - name: Create Build
         run: npm run build
 
