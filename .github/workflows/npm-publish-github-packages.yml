@@ -28,6 +28,12 @@ jobs:
       - name: Coveralls GitHub Action
         uses: coverallsapp/github-action@v2.0.0
 
+        run: |
+          coverage=$(cat ./coverage/lcov.info | ./node_modules/.bin/coveralls)
+          percentage=$(echo "$coverage" | awk '{print $NF}')
+          threshold=95
+              echo "ERROR: Code coverage is below threshold ($threshold): $percentage"
+
       - name: Create Build
         run: npm run build
 
