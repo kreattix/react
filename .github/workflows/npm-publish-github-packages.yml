@@ -28,7 +28,7 @@ jobs:
       - name: Validate code coverage
         run: |
           threshold=100
-          coverage=$(cat ./coverage/lcov.info | npx coveralls)
+          coverage=$(cat ./coverage/lcov.info | ./node_modules/.bin/coveralls)
           if [ $(echo "$coverage < $threshold" | bc -l) -eq 1 ]; then
               echo "Code coverage is too low: $coverage"
               exit 1
