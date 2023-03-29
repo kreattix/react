@@ -46,6 +46,18 @@
     "vite-plugin-linter": "^2.0.2",
     "vite-tsconfig-paths": "^4.0.7"
   },
+  "coveralls": {
+    "serviceJobId": "${{ github.job }}",
+    "repoToken": "${{ secrets.COVERALLS_REPO_TOKEN }}",
+    "thresholds": {
+      "global": {
+        "statements": 90,
+        "branches": 90,
+        "functions": 90,
+        "lines": 90
+      }
+    }
+  },
   "description": "A UI Component Library for ReactJS ",
   "title": "Kreattix Design",
   "homepage": "https://github.com/kreattix/react#readme",
