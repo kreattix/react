@@ -1,6 +1,6 @@
 import { ForwardRefExoticComponent, HTMLAttributes, ReactNode } from 'react'
 
-import { Sizes, Weights } from '../types'
+import { Sizes, Weights } from '../../utils/types'
 import { Display, Heading, Label, Paragraph, Title } from './Text'
 
 export interface TextProps extends HTMLAttributes<HTMLElement> {

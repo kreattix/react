@@ -1,6 +1,6 @@
-import { DefaultTheme } from 'styled-components'
+import { DefaultThemeConfig } from './types'
 
-export const defaultTheme: DefaultTheme = {
+export const defaultTheme: DefaultThemeConfig = {
   font: {
     fontFamily: {
       base: `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif`,
