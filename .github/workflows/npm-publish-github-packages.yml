@@ -26,8 +26,6 @@ jobs:
         run: npm run build:test
 
       - name: Coveralls GitHub Action
-        uses: coverallsapp/github-action@v2.0.0
-
         run: |
           coverage=$(cat ./coverage/lcov.info | ./node_modules/.bin/coveralls)
           percentage=$(echo "$coverage" | awk '{print $NF}')
