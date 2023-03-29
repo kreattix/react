@@ -1,10 +1,11 @@
 import react from '@vitejs/plugin-react'
+import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 import EsLint from 'vite-plugin-linter'
 import tsConfigPaths from 'vite-tsconfig-paths'
+
 const { EsLinter, linterPlugin } = EsLint
-import { resolve } from 'node:path'
 
 // https://vitejs.dev/config/
 export default defineConfig((configEnv) => ({
@@ -17,7 +18,7 @@ export default defineConfig((configEnv) => ({
     }),
     dts({
       include: ['src/**/*'],
-    })
+    }),
   ],
   envPrefix: 'KREATTIX',
   build: {
