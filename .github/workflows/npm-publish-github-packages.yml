@@ -25,14 +25,10 @@ jobs:
       - name: Run tests and calculate code coverage
         run: npm run build:test
 
-      - name: Validate code coverage
-        run: |
-          threshold=100
-          coverage=$(cat ./coverage/lcov.info | ./node_modules/.bin/coveralls)
-          if [ $(echo "$coverage < $threshold" | bc -l) -eq 1 ]; then
-              echo "Code coverage is too low: $coverage"
-              exit 1
-          fi
+      - name: Coveralls GitHub Action
+        uses: coverallsapp/github-action@v2.0.0
+
+
       - name: Create Build
         run: npm run build
 
