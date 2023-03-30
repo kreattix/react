@@ -1,1 +1,4 @@
-export { default as KreattixApp } from '@components/kreattix-app/KreattixApp'
+export { default as KreattixApp } from './KreattixApp'
+export * from './Provider'
+export * from './types'
+export * from './GlobalStyle'

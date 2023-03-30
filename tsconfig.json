@@ -20,10 +20,18 @@
     "importHelpers": true,
     "baseUrl": "src",
     "paths": {
-      "@app/*": ["./*"],
-      "@components/*": ["./components/*"],
+      "@types": ["./types"],
+      "@types/*": ["./types/*"],
+      "@configs": ["./configs"],
+      "@configs/*": ["./configs/*"],
+      "@utils": ["./utils"],
+      "@utils/*": ["./utils/*"],
+      "@theme": ["./theme"],
       "@theme/*": ["./theme/*"],
-      "@utils/*": ["./utils/*"]
+      "@components": ["./components"],
+      "@components/*": ["./components/*"],
+      "@app": ["./"],
+      "@app/*": ["./*"]
     }
   },
   "include": ["src/**/*"],

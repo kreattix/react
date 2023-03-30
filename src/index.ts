@@ -1,4 +1,11 @@
-import '@app/types'
+import '@types'
 
-export * from '@app/theme'
-export * from '@app/components'
+export { defineThemeConfig } from '@theme'
+export {
+  KreattixApp,
+  KreattixContext,
+  Provider,
+  Text,
+  defineAppConfig,
+  useKreattix,
+} from '@components'

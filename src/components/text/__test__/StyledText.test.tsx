@@ -1,5 +1,6 @@
 import { render } from '@app/setupTests'
-import StyledText from '@components/text/StyledText'
+
+import StyledText from '../StyledText'
 
 describe('StyledText', () => {
   it('renders without error', () => {

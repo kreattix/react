@@ -1,5 +1,5 @@
-import { DeepPartial, DefaultThemeConfig } from '@app/types'
+import { DeepPartial, DefaultThemeConfig } from '@types'
 
-export function configureTheme(config: DeepPartial<DefaultThemeConfig>) {
+export function defineThemeConfig(config: DeepPartial<DefaultThemeConfig>) {
   return config
 }

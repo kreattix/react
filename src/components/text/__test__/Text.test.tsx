@@ -1,5 +1,6 @@
 import { render } from '@app/setupTests'
-import { Display, Heading, Label, Paragraph, Span, Title } from '@components/text/Text'
+
+import { Display, Heading, Label, Paragraph, Span, Title } from '../Text'
 
 describe('components', () => {
   describe('Span', () => {

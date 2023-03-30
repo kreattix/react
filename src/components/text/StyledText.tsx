@@ -1,5 +1,6 @@
-import { BaseTextProps } from '@components/text/types'
 import styled, { css } from 'styled-components'
+
+import { BaseTextProps } from './types'
 
 const StyledText = styled.div<BaseTextProps>(({ theme, tagType, weight, size = 'medium' }) => {
   const styles = theme.text[tagType][size]

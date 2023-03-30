@@ -1,5 +1,6 @@
-import { configureTheme } from '@app/theme'
-import { DeepPartial, DefaultThemeConfig } from '@app/types'
+import { DeepPartial, DefaultThemeConfig } from '@types'
+
+import { defineThemeConfig } from '../theme'
 
 describe('configureTheme', () => {
   it('returns the input config', () => {
@@ -10,7 +11,7 @@ describe('configureTheme', () => {
         },
       },
     }
-    const result = configureTheme(config)
+    const result = defineThemeConfig(config)
     expect(result).toEqual(config)
   })
 })

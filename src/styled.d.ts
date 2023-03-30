@@ -1,4 +1,4 @@
-import { DefaultThemeConfig } from '@app/types'
+import { DefaultThemeConfig } from '@types'
 import 'styled-components'
 
 declare module 'styled-components' {
