@@ -28,6 +28,7 @@ interface ThemeTextTypes {
 }
 
 export interface DefaultThemeConfig {
+  uses?: string[]
   font: {
     fontFamily: ThemeFontFamilies
     weights: ThemeFontWeights

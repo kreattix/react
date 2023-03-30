@@ -9,7 +9,8 @@
   "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "start": "tsc && vite build --watch",
+    "start": "cd example && npm run dev",
+    "dev": "tsc && vite build --watch",
     "build": "tsc && vite build",
     "test": "jest --watch",
     "build:test": "jest",
@@ -32,7 +33,7 @@
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
     "@types/jest": "^29.5.0",
     "@types/lodash": "^4.14.192",
-    "@types/node": "^18.15.10",
+    "@types/node": "^18.15.11",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@types/styled-components": "^5.1.26",
