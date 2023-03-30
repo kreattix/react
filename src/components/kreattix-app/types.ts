@@ -1,7 +1,5 @@
-import { TextProps } from 'components/text/types'
+import { DeepPartial, DefaultThemeConfig, TextProps } from '@types'
 import { ReactNode } from 'react'
-import { DefaultThemeConfig } from 'theme/types'
-import { DeepPartial } from 'utils/types'
 
 export interface KreattixAppProps {
   children: ReactNode
