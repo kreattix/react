@@ -1,4 +1,4 @@
-import './types'
+import '@app/types'
 
-export * from './utils'
-export * from './components'
+export * from '@app/theme'
+export * from '@app/components'

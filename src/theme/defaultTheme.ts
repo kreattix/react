@@ -1,4 +1,4 @@
-import { DefaultThemeConfig } from './types'
+import { DefaultThemeConfig } from '@theme/types'
 
 export const defaultTheme: DefaultThemeConfig = {
   font: {

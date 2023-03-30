@@ -1,2 +1,2 @@
-export { Text } from './text'
-export { KreattixApp } from './kreattix-app'
+export { Text } from '@components/text'
+export { KreattixApp } from '@components/kreattix-app'

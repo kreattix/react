@@ -1,5 +1,5 @@
-import { render } from '../../../setupTests'
-import StyledText from '../StyledText'
+import StyledText from '@components/text/StyledText'
+import { render } from '@jest-setup'
 
 describe('StyledText', () => {
   it('renders without error', () => {

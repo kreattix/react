@@ -6,6 +6,15 @@ export default {
   collectCoverage: true,
   resetMocks: true,
   clearMocks: true,
+  moduleNameMapper: {
+    '^@app/(.+)$': '<rootDir>/src/$1',
+    '^@components/(.+)$': '<rootDir>/src/components/$1',
+    '^@theme/(.+)$': '<rootDir>/src/theme/$1',
+    '^@utils/(.+)$': '<rootDir>/src/utils/$1',
+    '^@jest-setup$': '<rootDir>/src/setupTests.tsx',
+  },
+  moduleDirectories: ['node_modules', 'src'],
+  modulePaths: ['<rootDir>', '@app', '@components', '@themes', '@utils', '@jest-setup'],
   coverageThreshold: {
     global: {
       branches: 100,

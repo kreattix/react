@@ -1,5 +1,5 @@
-import { Display, Heading, Label, Paragraph, Span, Title } from './Text'
-import { TextCompoundProps } from './types'
+import { Display, Heading, Label, Paragraph, Span, Title } from '@components/text/Text'
+import { TextCompoundProps } from '@components/text/types'
 
 export const Text = Span as TextCompoundProps
 Text.Paragraph = Paragraph

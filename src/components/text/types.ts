@@ -1,7 +1,6 @@
+import { Sizes, Weights } from '@app/types'
+import { Display, Heading, Label, Paragraph, Title } from '@components/text/Text'
 import { ForwardRefExoticComponent, HTMLAttributes, ReactNode } from 'react'
-
-import { Sizes, Weights } from '../../types'
-import { Display, Heading, Label, Paragraph, Title } from './Text'
 
 export interface TextProps extends HTMLAttributes<HTMLElement> {
   children?: ReactNode

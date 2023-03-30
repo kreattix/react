@@ -1,7 +1,6 @@
+import StyledText from '@components/text/StyledText'
+import { BaseTextProps, TextProps } from '@components/text/types'
 import { FC } from 'react'
-
-import StyledText from './StyledText'
-import { BaseTextProps, TextProps } from './types'
 
 const BaseText: FC<BaseTextProps> = ({ tagName, ...rest }) => {
   return <StyledText as={tagName as never} tagName={tagName} {...rest} />

@@ -16,9 +16,17 @@
     "declaration": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "declarationMap": true
+    "declarationMap": true,
+    "importHelpers": true,
+    "paths": {
+      "@app/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@theme/*": ["./src/theme/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@jest-setup": ["./src/setupTests.tsx"]
+    }
   },
-  "include": ["src"],
+  "include": ["src/**/*"],
   "exclude": ["dist", "node_modules", "example"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
