@@ -18,11 +18,12 @@
     "esModuleInterop": true,
     "declarationMap": true,
     "importHelpers": true,
+    "baseUrl": "src",
     "paths": {
-      "@app/*": ["./src/*"],
-      "@components/*": ["./src/components/*"],
-      "@theme/*": ["./src/theme/*"],
-      "@utils/*": ["./src/utils/*"],
+      "@app/*": ["./*"],
+      "@components/*": ["./components/*"],
+      "@theme/*": ["./theme/*"],
+      "@utils/*": ["./utils/*"]
     }
   },
   "include": ["src/**/*"],
