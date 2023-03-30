@@ -11,10 +11,9 @@ export default {
     '^@components/(.+)$': '<rootDir>/src/components/$1',
     '^@theme/(.+)$': '<rootDir>/src/theme/$1',
     '^@utils/(.+)$': '<rootDir>/src/utils/$1',
-    '^@jest-setup$': '<rootDir>/src/setupTests.tsx',
   },
   moduleDirectories: ['node_modules', 'src'],
-  modulePaths: ['<rootDir>', '@app', '@components', '@themes', '@utils', '@jest-setup'],
+  modulePaths: ['<rootDir>', '@app', '@components', '@themes', '@utils'],
   coverageThreshold: {
     global: {
       branches: 100,

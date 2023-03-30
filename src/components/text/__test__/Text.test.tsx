@@ -1,5 +1,5 @@
+import { render } from '@app/setupTests'
 import { Display, Heading, Label, Paragraph, Span, Title } from '@components/text/Text'
-import { render } from '@jest-setup'
 
 describe('components', () => {
   describe('Span', () => {
