@@ -28,6 +28,9 @@ interface ThemeTextTypes {
 }
 
 export interface DefaultThemeConfig {
+  variables: {
+    spacing: number
+  }
   font: {
     fontFamily: ThemeFontFamilies
     weights: ThemeFontWeights

@@ -1,37 +1,82 @@
 import { render } from '../../../setupTests'
 import StyledText from '../StyledText'
+import { TextTagTypes } from '../types'
 
 describe('check StyledText Component', () => {
-  it('renders without error', () => {
+  const text = 'Hello World!'
+  it('should apply styles based on tagType prop', () => {
     const { getByTestId } = render(
       <StyledText
-        data-testid="styled-text-test"
+        data-testid="text-component"
         as={'span'}
         tagName={'span'}
         tagType="paragraph"
-      />,
-    )
-    expect(getByTestId('styled-text-test')).toBeInTheDocument()
-  })
-
-  it('applies correct styles based on props', () => {
-    const { getByTestId } = render(
-      <StyledText
-        data-testid="styled-text-test"
-        as={'h3'}
-        tagName={'h3'}
-        tagType="heading"
-        size="large"
         weight="bold"
       >
-        Hello World!
+        {text}
       </StyledText>,
     )
-
-    const styledText = getByTestId('styled-text-test')
+    const styledText = getByTestId('text-component')
     expect(styledText).toHaveStyle(`
-      font-size: 32px;
-      line-height: 40px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      margin-top: 0px;
+      margin-bottom: 9px;
+    `)
+  })
+
+  it('should apply styles with ellipses', () => {
+    const { getByTestId } = render(
+      <StyledText data-testid="text-component" as={'p'} tagName={'p'} tagType="paragraph" ellipsis>
+        {text}
+      </StyledText>,
+    )
+    const styledText = getByTestId('text-component')
+    expect(styledText).toHaveStyle(`
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 0px;
+      margin-bottom: 9px;
+    `)
+  })
+
+  it('should apply styles with ellipses for label', () => {
+    const { getByTestId } = render(
+      <StyledText
+        data-testid="text-component"
+        as={'label'}
+        tagName={'label'}
+        tagType="label"
+        ellipsis
+      >
+        {text}
+      </StyledText>,
+    )
+    const styledText = getByTestId('text-component')
+    expect(styledText).toHaveStyle(`
+      font-size: 12px;
+      line-height: 16px;
+      margin-top: 0px;
+      margin-bottom: 4px;
+    `)
+  })
+
+  it('should apply styles for span', () => {
+    const { getByTestId } = render(
+      <StyledText
+        data-testid="text-component"
+        as={'span'}
+        tagName={'span'}
+        tagType="paragraph"
+        weight="bold"
+        isSpan
+      >
+        {text}
+      </StyledText>,
+    )
+    const styledText = getByTestId('text-component')
+    expect(styledText).toHaveStyle(`
       font-weight: 600;
     `)
   })

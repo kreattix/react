@@ -1,14 +1,14 @@
 import { FC } from 'react'
 
 import StyledText from './StyledText'
-import { BaseTextProps, TextProps } from './types'
+import { BaseTextProps, TextProps, TextSpanProps } from './types'
 
 const BaseText: FC<BaseTextProps> = ({ tagName, ...rest }) => {
   return <StyledText as={tagName as never} tagName={tagName} {...rest} />
 }
 
-export const Span: FC<TextProps> = (props) => {
-  return <BaseText tagName={'span'} tagType="paragraph" {...props} />
+export const Span: FC<TextSpanProps> = (props) => {
+  return <BaseText tagName={'span'} tagType="paragraph" isSpan {...props} />
 }
 
 export const Label: FC<TextProps> = (props) => {

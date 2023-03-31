@@ -1,6 +1,9 @@
 import { DefaultThemeConfig } from '../theme'
 
-export const defaultTheme: DefaultThemeConfig = {
+export const defaultThemeConfig: DefaultThemeConfig = {
+  variables: {
+    spacing: 24,
+  },
   font: {
     fontFamily: {
       base: `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif`,
