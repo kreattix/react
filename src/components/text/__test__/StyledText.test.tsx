@@ -1,7 +1,7 @@
 import { render } from '../../../setupTests'
 import StyledText from '../StyledText'
 
-describe('check StyledText', () => {
+describe('check StyledText Component', () => {
   it('renders without error', () => {
     const { getByTestId } = render(
       <StyledText

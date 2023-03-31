@@ -32,7 +32,7 @@ describe('check Kreattix Context', () => {
   })
 })
 
-describe('defineAppConfig', () => {
+describe('check defineAppConfig', () => {
   it('should return the provided configuration', async () => {
     const config: KreattixConfig = {
       text: {
