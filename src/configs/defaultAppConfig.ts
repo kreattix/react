@@ -1,4 +1,4 @@
-import { KreattixConfig } from '@types'
+import { KreattixConfig } from '../components'
 
 export const defaultAppConfig: KreattixConfig = {
   text: {

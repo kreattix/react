@@ -1,8 +1,7 @@
-import { render } from '@app/setupTests'
-
+import { render } from '../../../setupTests'
 import StyledText from '../StyledText'
 
-describe('StyledText', () => {
+describe('check StyledText', () => {
   it('renders without error', () => {
     const { getByTestId } = render(
       <StyledText

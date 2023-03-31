@@ -6,22 +6,6 @@ export default {
   collectCoverage: true,
   resetMocks: true,
   clearMocks: true,
-  moduleNameMapper: {
-    '^@types$': '<rootDir>/src/types',
-    '^@types/(.+)$': '<rootDir>/src/types/$1',
-    '^@configs$': '<rootDir>/src/configs',
-    '^@configs/(.+)$': '<rootDir>/src/configs/$1',
-    '^@utils$': '<rootDir>/src/utils',
-    '^@utils$/(.+)': '<rootDir>/src/utils/$1',
-    '^@theme$': '<rootDir>/src/theme',
-    '^@theme$/(.+)': '<rootDir>/src/theme/$1',
-    '^@components$': '<rootDir>/src/components',
-    '^@components/(.+)$': '<rootDir>/src/components/$1',
-    '^@app$': '<rootDir>/src',
-    '^@app/(.+)$': '<rootDir>/src/$1',
-  },
-  moduleDirectories: ['node_modules', 'src'],
-  modulePaths: ['<rootDir>', '@app', '@components', '@themes', '@utils'],
   coverageThreshold: {
     global: {
       branches: 100,

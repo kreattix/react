@@ -1,6 +1,6 @@
-import { defaultAppConfig } from '@configs'
 import { createContext, useContext } from 'react'
 
+import { defaultAppConfig } from '../../configs'
 import { KreattixConfig } from './types'
 
 export const KreattixContext = createContext<KreattixConfig>(defaultAppConfig)

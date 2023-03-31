@@ -1,6 +1,6 @@
-import { KreattixApp, Text, configureTheme } from '@kreattix/react'
+import { KreattixApp, Text, defineThemeConfig } from '@kreattix/react'
 
-const theme = configureTheme({
+const theme = defineThemeConfig({
   font: {
     fontFamily: {
       base: 'Montserrat, sans-serif',

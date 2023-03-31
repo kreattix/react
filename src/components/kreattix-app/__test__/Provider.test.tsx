@@ -1,12 +1,11 @@
-import { render } from '@app/setupTests'
-import { defaultAppConfig } from '@configs'
-import { KreattixConfig } from '@types'
-
+import { defaultAppConfig } from '../../../configs'
+import { render } from '../../../setupTests'
 import KreattixApp from '../KreattixApp'
 import { Provider, defineAppConfig, useKreattix } from '../Provider'
+import { KreattixConfig } from '../types'
 
-describe('Kreattix Context', () => {
-  test('should render without error', async () => {
+describe('check Kreattix Context', () => {
+  it('should render without error', async () => {
     const Component = () => <div>Test</div>
 
     const wrapper = render(
@@ -17,7 +16,7 @@ describe('Kreattix Context', () => {
 
     expect(wrapper.container.firstChild).toBeInTheDocument()
   })
-  test('should provide default app config', async () => {
+  it('should provide default app config', async () => {
     const Component = () => {
       const config = useKreattix()
       return <div>{JSON.stringify(config)}</div>
@@ -34,7 +33,7 @@ describe('Kreattix Context', () => {
 })
 
 describe('defineAppConfig', () => {
-  test('should return the provided configuration', async () => {
+  it('should return the provided configuration', async () => {
     const config: KreattixConfig = {
       text: {
         size: 'medium',

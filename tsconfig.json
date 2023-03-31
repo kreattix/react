@@ -17,22 +17,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "declarationMap": true,
-    "importHelpers": true,
-    "baseUrl": "src",
-    "paths": {
-      "@types": ["./types"],
-      "@types/*": ["./types/*"],
-      "@configs": ["./configs"],
-      "@configs/*": ["./configs/*"],
-      "@utils": ["./utils"],
-      "@utils/*": ["./utils/*"],
-      "@theme": ["./theme"],
-      "@theme/*": ["./theme/*"],
-      "@components": ["./components"],
-      "@components/*": ["./components/*"],
-      "@app": ["./"],
-      "@app/*": ["./*"]
-    }
+    "importHelpers": true
   },
   "include": ["src/**/*"],
   "exclude": ["dist", "node_modules", "example"],

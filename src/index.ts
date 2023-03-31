@@ -1,6 +1,6 @@
-import '@types'
+import './types'
 
-export { defineThemeConfig } from '@theme'
+export { defineThemeConfig } from './theme'
 export {
   KreattixApp,
   KreattixContext,
@@ -8,4 +8,4 @@ export {
   Text,
   defineAppConfig,
   useKreattix,
-} from '@components'
+} from './components'

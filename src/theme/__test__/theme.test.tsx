@@ -1,8 +1,8 @@
-import { DeepPartial, DefaultThemeConfig } from '@types'
-
+import { DeepPartial } from '../../types'
 import { defineThemeConfig } from '../theme'
+import { DefaultThemeConfig } from '../types'
 
-describe('configureTheme', () => {
+describe('check defineThemeConfig', () => {
   it('returns the input config', () => {
     const config: DeepPartial<DefaultThemeConfig> = {
       font: {
