@@ -1,6 +1,5 @@
 import { render } from '../../../setupTests'
 import StyledText from '../StyledText'
-import { TextTagTypes } from '../types'
 
 describe('check StyledText Component', () => {
   const text = 'Hello World!'
