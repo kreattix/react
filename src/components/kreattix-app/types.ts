@@ -1,15 +1,14 @@
 import { ReactNode } from 'react'
 
-import { DefaultThemeConfig } from '../../theme'
-import { DeepPartial } from '../../types'
-import { TextProps } from '../text'
+import { DefaultThemeConfig, TypographyProps } from '../../types'
+import { DeepPartial } from '../../utils/types'
+
+export interface ComponentConfig {
+  typography?: Pick<TypographyProps, 'weight' | 'size'>
+}
 
 export interface KreattixAppProps {
   children: ReactNode
   theme?: DeepPartial<DefaultThemeConfig>
-  appConfig?: KreattixConfig
-}
-
-export interface KreattixConfig {
-  text?: Pick<TextProps, 'weight' | 'size'>
+  components?: ComponentConfig
 }

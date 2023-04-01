@@ -1,24 +1,14 @@
+import { render } from '@testing-library/react'
+
 import { defaultAppConfig } from '../../../configs'
-import { render } from '../../../setupTests'
-import KreattixApp from '../KreattixApp'
-import { Provider, defineAppConfig, useKreattix } from '../Provider'
-import { KreattixConfig } from '../types'
+import { KreattixApp } from '../KreattixApp'
+import { createComponent, useComponent } from '../Provider'
+import { ComponentConfig } from '../types'
 
 describe('check Kreattix Context', () => {
-  it('should render without error', async () => {
-    const Component = () => <div>Test</div>
-
-    const wrapper = render(
-      <Provider value={{}}>
-        <Component />
-      </Provider>,
-    )
-
-    expect(wrapper.container.firstChild).toBeInTheDocument()
-  })
   it('should provide default app config', async () => {
     const Component = () => {
-      const config = useKreattix()
+      const config = useComponent()
       return <div>{JSON.stringify(config)}</div>
     }
 
@@ -32,14 +22,14 @@ describe('check Kreattix Context', () => {
   })
 })
 
-describe('check defineAppConfig', () => {
+describe('check createComponent', () => {
   it('should return the provided configuration', async () => {
-    const config: KreattixConfig = {
-      text: {
+    const config: ComponentConfig = {
+      typography: {
         size: 'medium',
       },
     }
 
-    expect(defineAppConfig(config)).toEqual(config)
+    expect(createComponent(config)).toEqual(config)
   })
 })
