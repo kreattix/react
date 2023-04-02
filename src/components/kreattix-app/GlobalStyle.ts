@@ -1,6 +1,6 @@
 import { createGlobalStyle, css } from 'styled-components'
 
-import { addSizeRatioWithPixel } from '../../utils'
+import { appendPixels } from '../../utils/functions'
 
 export const GlobalStyle = createGlobalStyle(({ theme }) => {
   const { global } = theme
@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle(({ theme }) => {
   return css`
     :root {
       font-family: ${global.fontFamily};
-      font-size: ${addSizeRatioWithPixel(global.fontSize)};
+      font-size: ${appendPixels(global.fontSize)};
     }
   `
 })

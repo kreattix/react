@@ -1,5 +1,6 @@
-import { ForwardRefExoticComponent, HTMLAttributes } from 'react'
+import * as React from 'react'
 
+import { PaletteItems } from '../../theme/types'
 import { Sizes, Weights } from '../../utils/types'
 import {
   TypographyDisplay,
@@ -29,10 +30,11 @@ export interface TypographyStyles {
   tagName: string
 }
 
-export interface TypographyProps extends HTMLAttributes<HTMLElement> {
+export interface TypographyProps {
   size?: Sizes
   weight?: Weights
   ellipsis?: boolean
+  color?: PaletteItems
 }
 
 export type TypographySpanProps = Omit<TypographyProps, 'ellipsis' | 'size'>
@@ -41,7 +43,7 @@ export interface BaseTypographyProps extends TypographyProps {
   variant: keyof TypographyVariantMapping
 }
 
-export interface CompoundTypographyProps extends ForwardRefExoticComponent<TypographyProps> {
+export interface CompoundTypographyProps extends React.ForwardRefExoticComponent<TypographyProps> {
   Span: typeof TypographySpan
   Label: typeof TypographyLabel
   Paragraph: typeof TypographyParagraph

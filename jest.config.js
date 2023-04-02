@@ -15,4 +15,6 @@ export default {
     },
   },
   coveragePathIgnorePatterns: ['node_modules', 'index.ts', 'GlobalStyle.ts'],
+  collectCoverageFrom: ['src/**/*.{ts,tsx}'],
+  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
 }

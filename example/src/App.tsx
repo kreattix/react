@@ -9,15 +9,13 @@ const theme = createTheme({
 const App = () => {
   return (
     <KreattixApp theme={theme}>
-      <Typography.Label ellipsis>Label Typography Text Make it long</Typography.Label>
-      <Typography ellipsis>Default Typography Text</Typography>
-      <Typography.Span>Span Typography Text</Typography.Span>
-      <Typography.Paragraph ellipsis>Paragraph Typography Text</Typography.Paragraph>
-      <Typography.Title ellipsis>Title Typography Text</Typography.Title>
-      <Typography.Heading ellipsis>Heading Typography Text</Typography.Heading>
-      <Typography.Display ellipsis size="small">
-        Display Typography Text
-      </Typography.Display>
+      <Typography.Label color="primary">Label Typography Text Make it long</Typography.Label>
+      <Typography color="primary">Default Typography Text</Typography>
+      <Typography.Span color="secondary">Span Typography Text</Typography.Span>
+      <Typography.Paragraph color="primary">Paragraph Typography Text</Typography.Paragraph>
+      <Typography.Title color="primary">Title Typography Text</Typography.Title>
+      <Typography.Heading color="primary">Heading Typography Text</Typography.Heading>
+      <Typography.Display color="primary">Display Typography Text</Typography.Display>
     </KreattixApp>
   )
 }
