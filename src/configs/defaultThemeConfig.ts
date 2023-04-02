@@ -36,36 +36,29 @@ export const defaultThemeConfig: DefaultThemeConfig = {
   components: {
     typography: {
       display: {
-        tagName: 'h1',
         fontSize: 45,
         lineHeight: 56,
         fontWeight: 'normal',
       },
       heading: {
-        tagName: 'h3',
         fontSize: 28,
         lineHeight: 36,
         fontWeight: 'normal',
       },
       title: {
-        tagName: 'h5',
         fontSize: 20,
         lineHeight: 28,
         fontWeight: 'normal',
       },
       paragraph: {
-        tagName: 'p',
         fontSize: 16,
         lineHeight: 20,
       },
       label: {
-        tagName: 'label',
         fontSize: 14,
         lineHeight: 16,
       },
-      span: {
-        tagName: 'span',
-      },
+      span: {},
     },
   },
 }

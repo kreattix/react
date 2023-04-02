@@ -27,7 +27,6 @@ export interface TypographyStyles {
   lineHeight?: number
   marginTop?: number
   marginBottom?: number
-  tagName: string
 }
 
 export interface TypographyProps {
@@ -39,11 +38,16 @@ export interface TypographyProps {
 
 export type TypographySpanProps = Omit<TypographyProps, 'ellipsis' | 'size'>
 
-export interface BaseTypographyProps extends TypographyProps {
+export interface StyledTypographyProps extends TypographyProps {
   variant: keyof TypographyVariantMapping
 }
 
-export interface CompoundTypographyProps extends React.ForwardRefExoticComponent<TypographyProps> {
+export interface CompoundTypographyProps
+  extends React.ForwardRefExoticComponent<
+    TypographyProps &
+      React.HTMLAttributes<HTMLParagraphElement> &
+      React.RefAttributes<HTMLHeadingElement>
+  > {
   Span: typeof TypographySpan
   Label: typeof TypographyLabel
   Paragraph: typeof TypographyParagraph

@@ -1,46 +1,52 @@
 import * as React from 'react'
 
-import { getThemeConfig } from '../../utils/functions'
 import StyledTypography from './StyledTypography'
-import { BaseTypographyProps, TypographyProps, TypographySpanProps } from './types'
+import { TypographyProps, TypographySpanProps } from './types'
 
-const BaseTypography: React.FC<BaseTypographyProps> = (props) => {
-  const { tagName } = getThemeConfig().components.typography[props.variant]
-  return <StyledTypography as={tagName as never} {...props} />
-}
-
-export const TypographySpan: React.FC<
+export const TypographySpan = React.forwardRef<
+  HTMLSpanElement,
   TypographySpanProps & React.HTMLAttributes<HTMLSpanElement>
-> = (props) => {
-  return <BaseTypography variant="span" {...props} />
-}
+>((props, ref) => {
+  return <StyledTypography ref={ref} as="span" variant="span" {...props} />
+})
+TypographySpan.displayName = 'TypographySpan'
 
-export const TypographyLabel: React.FC<
+export const TypographyLabel = React.forwardRef<
+  HTMLLabelElement,
   TypographyProps & React.LabelHTMLAttributes<HTMLLabelElement>
-> = (props) => {
-  return <BaseTypography variant="label" {...props} />
-}
+>((props, ref) => {
+  return <StyledTypography ref={ref} as="label" variant="label" {...props} />
+})
+TypographyLabel.displayName = 'TypographyLabel'
 
-export const TypographyParagraph: React.FC<
+export const TypographyParagraph = React.forwardRef<
+  HTMLParagraphElement,
   TypographyProps & React.HTMLAttributes<HTMLParagraphElement>
-> = (props) => {
-  return <BaseTypography variant="paragraph" {...props} />
-}
+>((props, ref) => {
+  return <StyledTypography ref={ref} as="p" variant="paragraph" {...props} />
+})
+TypographyParagraph.displayName = 'TypographyParagraph'
 
-export const TypographyTitle: React.FC<
+export const TypographyTitle = React.forwardRef<
+  HTMLHeadingElement,
   TypographyProps & React.HTMLAttributes<HTMLHeadingElement>
-> = (props) => {
-  return <BaseTypography variant="title" {...props} />
-}
+>((props, ref) => {
+  return <StyledTypography ref={ref} as="h5" variant="title" {...props} />
+})
+TypographyTitle.displayName = 'TypographyTitle'
 
-export const TypographyHeading: React.FC<
+export const TypographyHeading = React.forwardRef<
+  HTMLHeadingElement,
   TypographyProps & React.HTMLAttributes<HTMLHeadingElement>
-> = (props) => {
-  return <BaseTypography variant="heading" {...props} />
-}
+>((props, ref) => {
+  return <StyledTypography ref={ref} as="h3" variant="heading" {...props} />
+})
+TypographyHeading.displayName = 'TypographyHeading'
 
-export const TypographyDisplay: React.FC<
+export const TypographyDisplay = React.forwardRef<
+  HTMLHeadingElement,
   TypographyProps & React.HTMLAttributes<HTMLHeadingElement>
-> = (props) => {
-  return <BaseTypography variant="display" {...props} />
-}
+>((props, ref) => {
+  return <StyledTypography ref={ref} as="h1" variant="display" {...props} />
+})
+TypographyDisplay.displayName = 'TypographyDisplay'

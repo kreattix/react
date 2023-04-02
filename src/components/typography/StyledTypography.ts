@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components'
 
 import { WEIGHTS, appendPixels, getSizedPixels, getThemeConfig } from '../../utils'
-import { BaseTypographyProps, TypographyStyles } from './types'
+import { StyledTypographyProps, TypographyStyles } from './types'
 
-const StyledTypography = styled.div<BaseTypographyProps>(
+const StyledTypography = styled.div<StyledTypographyProps>(
   ({ variant, weight, size, ellipsis, color }) => {
     const {
       components: { typography },

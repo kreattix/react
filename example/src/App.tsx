@@ -1,4 +1,5 @@
 import { KreattixApp, Typography, createTheme } from '@kreattix/react'
+import { useRef } from 'react'
 
 const theme = createTheme({
   global: {
@@ -7,9 +8,13 @@ const theme = createTheme({
 })
 
 const App = () => {
+  const textRef = useRef<HTMLLabelElement>(null)
+
   return (
     <KreattixApp theme={theme}>
-      <Typography.Label color="primary">Label Typography Text Make it long</Typography.Label>
+      <Typography.Label ref={textRef} color="primary">
+        Label Typography Text Make it long
+      </Typography.Label>
       <Typography color="primary">Default Typography Text</Typography>
       <Typography.Span color="secondary">Span Typography Text</Typography.Span>
       <Typography.Paragraph color="primary">Paragraph Typography Text</Typography.Paragraph>

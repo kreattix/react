@@ -7,8 +7,8 @@ describe('check defineThemeConfig', () => {
     const config: DeepPartial<DefaultThemeConfig> = {
       components: {
         typography: {
-          span: {
-            tagName: 'span',
+          paragraph: {
+            fontSize: 20,
           },
         },
       },

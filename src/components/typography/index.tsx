@@ -9,6 +9,7 @@ import {
 import { CompoundTypographyProps } from './types'
 
 export const Typography = TypographyParagraph as CompoundTypographyProps
+
 Typography.Span = TypographySpan
 Typography.Label = TypographyLabel
 Typography.Paragraph = TypographyParagraph
