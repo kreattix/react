@@ -1,6 +1,6 @@
 {
   "name": "@kreattix/react",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "files": [
     "dist"
@@ -9,7 +9,7 @@
   "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "start": "cd example && npm uninstall @kreattix/react && npm install @kreattix/react@file:.. && npm run dev",
+    "start": "cd example && npm uninstall @kreattix/react && npm install @kreattix/react@file:.. && npm start",
     "dev": "tsc && vite build --watch",
     "build": "tsc && vite build",
     "test": "jest --watch",
@@ -24,6 +24,7 @@
     "react-dom": ">=18.x"
   },
   "dependencies": {
+    "@kreattix/colors": "^1.0.6",
     "lodash": "^4.17.21"
   },
   "devDependencies": {

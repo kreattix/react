@@ -1,13 +1,13 @@
 import { createContext, useContext } from 'react'
 
 import { defaultAppConfig } from '../../configs'
-import { KreattixConfig } from './types'
+import { ComponentConfig } from './types'
 
-export const KreattixContext = createContext<KreattixConfig>(defaultAppConfig)
-export const Provider = KreattixContext.Provider
+export const ComponentContext = createContext<ComponentConfig>(defaultAppConfig)
+export const Provider = ComponentContext.Provider
 
-export function defineAppConfig(config: KreattixConfig) {
+export function createComponent(config: ComponentConfig) {
   return config
 }
 
-export const useKreattix = () => useContext(KreattixContext)
+export const useComponent = () => useContext(ComponentContext)

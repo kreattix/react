@@ -1,3 +1,3 @@
-export type { DeepPartial, Sizes, Weights } from './utils/types'
 export type { DefaultThemeConfig } from './theme/types'
-export type { KreattixAppProps, KreattixConfig, TextProps } from './components'
+export type { ComponentConfig, KreattixAppProps } from './components/kreattix-app/types'
+export type { TypographyProps } from './components/typography/types'

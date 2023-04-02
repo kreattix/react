@@ -1,7 +1,7 @@
-import { KreattixConfig } from '../components'
+import { ComponentConfig } from '../components/kreattix-app/types'
 
-export const defaultAppConfig: KreattixConfig = {
-  text: {
+export const defaultAppConfig: ComponentConfig = {
+  typography: {
     size: 'medium',
   },
 }

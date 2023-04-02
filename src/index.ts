@@ -1,11 +1,5 @@
 import './types'
 
-export { defineThemeConfig } from './theme'
-export {
-  KreattixApp,
-  KreattixContext,
-  Provider,
-  Text,
-  defineAppConfig,
-  useKreattix,
-} from './components'
+export * from './theme'
+export * from './components/typography'
+export * from './components/kreattix-app'

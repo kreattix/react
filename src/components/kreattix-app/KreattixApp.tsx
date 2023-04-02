@@ -7,9 +7,9 @@ import { GlobalStyle } from './GlobalStyle'
 import { Provider } from './Provider'
 import { KreattixAppProps } from './types'
 
-const KreattixApp: FC<KreattixAppProps> = ({ children, theme = {}, appConfig = {} }) => {
+export const KreattixApp: FC<KreattixAppProps> = ({ children, theme = {}, components = {} }) => {
   return (
-    <Provider value={_.merge(defaultAppConfig, appConfig)}>
+    <Provider value={_.merge(defaultAppConfig, components)}>
       <ThemeProvider theme={_.merge(defaultThemeConfig, theme)}>
         <GlobalStyle />
         {children}
@@ -17,5 +17,3 @@ const KreattixApp: FC<KreattixAppProps> = ({ children, theme = {}, appConfig = {
     </Provider>
   )
 }
-
-export default KreattixApp

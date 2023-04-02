@@ -1,89 +1,64 @@
-import { DefaultThemeConfig } from '../theme'
+import { Colors } from '@kreattix/colors'
+
+import { DefaultThemeConfig } from '../types'
 
 export const defaultThemeConfig: DefaultThemeConfig = {
-  variables: {
-    spacing: 24,
+  global: {
+    fontSize: 16,
+    fontFamily: [
+      '-apple-system',
+      'BlinkMacSystemFont',
+      'Segoe UI',
+      'Montserrat',
+      'Roboto',
+      'Oxygen',
+      'Ubuntu',
+      'Cantarell',
+      'Open Sans',
+      'Helvetica Neue',
+      'sans-serif',
+    ].join(','),
   },
-  font: {
-    fontFamily: {
-      base: `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif`,
+  palette: {
+    primary: {
+      main: Colors.blue[500],
+      light: Colors.blue[400],
+      dark: Colors.blue[600],
+      contrastTextColor: Colors.white,
     },
-    weights: {
-      light: 300,
-      normal: 400,
-      bold: 600,
+    secondary: {
+      main: Colors.purple[500],
+      light: Colors.purple[400],
+      dark: Colors.purple[600],
+      contrastTextColor: Colors.white,
     },
   },
-  text: {
-    label: {
-      small: {
-        fontSize: '10px',
-        lineHeight: '16px',
+  components: {
+    typography: {
+      display: {
+        fontSize: 45,
+        lineHeight: 56,
+        fontWeight: 'normal',
       },
-      medium: {
-        fontSize: '12px',
-        lineHeight: '16px',
+      heading: {
+        fontSize: 28,
+        lineHeight: 36,
+        fontWeight: 'normal',
       },
-      large: {
-        fontSize: '14px',
-        lineHeight: '20px',
+      title: {
+        fontSize: 20,
+        lineHeight: 28,
+        fontWeight: 'normal',
       },
-    },
-    paragraph: {
-      small: {
-        fontSize: '12px',
-        lineHeight: '16px',
+      paragraph: {
+        fontSize: 16,
+        lineHeight: 20,
       },
-      medium: {
-        fontSize: '14px',
-        lineHeight: '20px',
+      label: {
+        fontSize: 14,
+        lineHeight: 16,
       },
-      large: {
-        fontSize: '16px',
-        lineHeight: '24px',
-      },
-    },
-    title: {
-      small: {
-        fontSize: '16px',
-        lineHeight: '24px',
-      },
-      medium: {
-        fontSize: '20px',
-        lineHeight: '24px',
-      },
-      large: {
-        fontSize: '22px',
-        lineHeight: '28px',
-      },
-    },
-    heading: {
-      small: {
-        fontSize: '24px',
-        lineHeight: '32px',
-      },
-      medium: {
-        fontSize: '28px',
-        lineHeight: '36px',
-      },
-      large: {
-        fontSize: '32px',
-        lineHeight: '40px',
-      },
-    },
-    display: {
-      small: {
-        fontSize: '36px',
-        lineHeight: '44px',
-      },
-      medium: {
-        fontSize: '45px',
-        lineHeight: '52px',
-      },
-      large: {
-        fontSize: '57px',
-        lineHeight: '64px',
-      },
+      span: {},
     },
   },
 }

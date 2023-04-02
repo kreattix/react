@@ -1,39 +1,21 @@
-interface ThemeFontFamilies {
-  base: string
+import { TypographyStyles, TypographyVariantMapping } from '../components/typography/types'
+
+export interface PaletteValues {
+  main: string
+  light: string
+  dark: string
+  contrastTextColor: string
 }
 
-interface ThemeFontWeights {
-  light: number | string
-  normal: number | string
-  bold: number | string
-}
-
-interface ThemeTextStyles {
-  fontSize: string
-  lineHeight: string
-}
-
-interface ThemeTextSizes {
-  small: ThemeTextStyles
-  medium: ThemeTextStyles
-  large: ThemeTextStyles
-}
-
-interface ThemeTextTypes {
-  label: ThemeTextSizes
-  paragraph: ThemeTextSizes
-  title: ThemeTextSizes
-  heading: ThemeTextSizes
-  display: ThemeTextSizes
-}
+export type PaletteItems = 'primary' | 'secondary'
 
 export interface DefaultThemeConfig {
-  variables: {
-    spacing: number
+  global: {
+    fontFamily: string
+    fontSize: number
   }
-  font: {
-    fontFamily: ThemeFontFamilies
-    weights: ThemeFontWeights
+  palette: Record<PaletteItems, PaletteValues>
+  components: {
+    typography: Record<keyof TypographyVariantMapping, TypographyStyles>
   }
-  text: ThemeTextTypes
 }
