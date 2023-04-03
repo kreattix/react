@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import { DefaultThemeConfig, TypographyProps } from '../../types'
+import { DefaultThemeConfig, DividerProps, TypographyProps } from '../../types'
 import { DeepPartial } from '../../utils/types'
 import { TypographySpanProps } from '../typography/types'
 
@@ -13,10 +13,11 @@ export interface ComponentConfig {
     span?: Pick<TypographySpanProps, 'color' | 'weight'>
     title?: Pick<TypographyProps, 'color' | 'ellipsis' | 'size' | 'weight'>
   }
+  divider: Pick<DividerProps, 'alignment' | 'color' | 'weight'>
 }
 
 export interface KreattixAppProps {
   children: ReactNode
   theme?: DeepPartial<DefaultThemeConfig>
-  components?: ComponentConfig
+  components?: DeepPartial<ComponentConfig>
 }

@@ -1,6 +1,6 @@
 import { Colors } from '@kreattix/colors'
 
-import { DefaultThemeConfig } from '../types'
+import { DefaultThemeConfig } from '../theme/types'
 
 export const defaultThemeConfig: DefaultThemeConfig = {
   components: {

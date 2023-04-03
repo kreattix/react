@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react'
 
 import { defaultComponentConfig } from '../../../configs'
+import { ComponentConfig } from '../../../types'
 import { KreattixApp } from '../KreattixApp'
 import { createComponentConfig, useComponent } from '../Provider'
-import { ComponentConfig } from '../types'
 
 describe('check Kreattix Context', () => {
   it('should provide default app config', async () => {
