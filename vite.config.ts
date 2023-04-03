@@ -9,6 +9,25 @@ const { EsLinter, linterPlugin } = EsLint
 
 // https://vitejs.dev/config/
 export default defineConfig((configEnv) => ({
+  build: {
+    lib: {
+      entry: resolve('src', 'index.ts'),
+      fileName: (format) => `index.${format}.js`,
+      formats: ['es', 'umd'],
+      name: '@kreattix/react',
+    },
+    minify: 'esbuild',
+    rollupOptions: {
+      external: ['react', 'react-dom'],
+      output: {
+        globals: {
+          react: 'React',
+        },
+      },
+    },
+    sourcemap: true,
+  },
+  envPrefix: 'KREATTIX',
   plugins: [
     react(),
     tsConfigPaths(),
@@ -20,23 +39,4 @@ export default defineConfig((configEnv) => ({
       include: ['src/**/*'],
     }),
   ],
-  envPrefix: 'KREATTIX',
-  build: {
-    lib: {
-      entry: resolve('src', 'index.ts'),
-      name: '@kreattix/react',
-      formats: ['es', 'umd'],
-      fileName: (format) => `index.${format}.js`,
-    },
-    sourcemap: true,
-    minify: 'esbuild',
-    rollupOptions: {
-      external: ['react', 'react-dom'],
-      output: {
-        globals: {
-          react: 'React',
-        },
-      },
-    },
-  },
 }))
