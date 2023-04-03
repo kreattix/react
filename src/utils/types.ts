@@ -2,4 +2,4 @@ export type DeepPartial<T> = T extends object ? { [P in keyof T]?: DeepPartial<T
 
 export type Sizes = 'small' | 'medium' | 'large'
 
-export type Weights = 'light' | 'normal' | 'semibold' | 'bold'
+export type Weights = 'light' | 'normal' | 'medium' | 'semibold' | 'bold'

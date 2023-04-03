@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle(({ theme }) => {
     :root {
       font-family: ${global.fontFamily};
       font-size: ${appendPixels(global.fontSize)};
+      color: ${global.color};
     }
   `
 })

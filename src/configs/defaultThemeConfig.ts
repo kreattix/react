@@ -1,9 +1,14 @@
 import { Colors } from '@kreattix/colors'
 
-import { DefaultThemeConfig } from '../types'
+import { DefaultThemeConfig } from '../theme/types'
 
 export const defaultThemeConfig: DefaultThemeConfig = {
   components: {
+    divider: {
+      borderColor: Colors.gray[100],
+      borderWidth: 1,
+      fontWeight: 'medium',
+    },
     typography: {
       display: {
         fontSize: 45,
@@ -32,6 +37,7 @@ export const defaultThemeConfig: DefaultThemeConfig = {
     },
   },
   global: {
+    color: Colors.black[800],
     fontFamily: [
       '-apple-system',
       'BlinkMacSystemFont',
@@ -46,6 +52,7 @@ export const defaultThemeConfig: DefaultThemeConfig = {
       'sans-serif',
     ].join(','),
     fontSize: 16,
+    spacing: 24,
   },
   palette: {
     primary: {
