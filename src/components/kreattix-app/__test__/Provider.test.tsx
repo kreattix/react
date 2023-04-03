@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react'
 
-import { defaultAppConfig } from '../../../configs'
+import { defaultComponentConfig } from '../../../configs'
 import { KreattixApp } from '../KreattixApp'
-import { createComponent, useComponent } from '../Provider'
+import { createComponentConfig, useComponent } from '../Provider'
 import { ComponentConfig } from '../types'
 
 describe('check Kreattix Context', () => {
@@ -18,7 +18,7 @@ describe('check Kreattix Context', () => {
       </KreattixApp>,
     )
 
-    expect(wrapper.container.textContent).toBe(JSON.stringify(defaultAppConfig))
+    expect(wrapper.container.textContent).toBe(JSON.stringify(defaultComponentConfig))
   })
 })
 
@@ -26,10 +26,12 @@ describe('check createComponent', () => {
   it('should return the provided configuration', async () => {
     const config: ComponentConfig = {
       typography: {
-        size: 'medium',
+        paragraph: {
+          size: 'large',
+        },
       },
     }
 
-    expect(createComponent(config)).toEqual(config)
+    expect(createComponentConfig(config)).toEqual(config)
   })
 })
