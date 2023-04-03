@@ -40,6 +40,8 @@ const StyledDivider = styled.div<DividerProps>(({ children, color, weight, align
       &:before {
         content: '';
         flex: ${alignment === 'left' ? appendPixels(global.spacing) : 1};
+        width: ${alignment === 'left' ? appendPixels(global.spacing) : 1};
+        max-width: ${alignment === 'left' ? appendPixels(global.spacing) : 1};
       }
     `}
 
@@ -48,6 +50,8 @@ const StyledDivider = styled.div<DividerProps>(({ children, color, weight, align
       &:after {
         content: '';
         flex: ${alignment === 'right' ? appendPixels(global.spacing) : 1};
+        width: ${alignment === 'right' ? appendPixels(global.spacing) : 1};
+        max-width: ${alignment === 'right' ? appendPixels(global.spacing) : 1};
       }
     `}
   `
