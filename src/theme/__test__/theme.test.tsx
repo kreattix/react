@@ -1,4 +1,4 @@
-import { createTheme } from '..'
+import { createThemeConfig } from '..'
 import { DeepPartial } from '../../utils/types'
 import { DefaultThemeConfig } from '../types'
 
@@ -13,7 +13,7 @@ describe('check defineThemeConfig', () => {
         },
       },
     }
-    const result = createTheme(config)
+    const result = createThemeConfig(config)
     expect(result).toEqual(config)
   })
 })

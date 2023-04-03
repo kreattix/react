@@ -1,2 +1,2 @@
-export * from './defaultAppConfig'
+export * from './defaultComponentConfig'
 export * from './defaultThemeConfig'

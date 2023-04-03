@@ -14,7 +14,13 @@ export default {
       statements: 100,
     },
   },
-  coveragePathIgnorePatterns: ['node_modules', 'index.ts', 'GlobalStyle.ts'],
+  coveragePathIgnorePatterns: [
+    'node_modules',
+    'index.ts',
+    'GlobalStyle.ts',
+    'styled.d.ts',
+    'vite-env.d.ts',
+  ],
   collectCoverageFrom: ['src/**/*.{ts,tsx}'],
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
 }

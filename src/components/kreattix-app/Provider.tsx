@@ -1,12 +1,12 @@
 import { createContext, useContext } from 'react'
 
-import { defaultAppConfig } from '../../configs'
+import { defaultComponentConfig } from '../../configs'
 import { ComponentConfig } from './types'
 
-export const ComponentContext = createContext<ComponentConfig>(defaultAppConfig)
+export const ComponentContext = createContext<ComponentConfig>(defaultComponentConfig)
 export const Provider = ComponentContext.Provider
 
-export function createComponent(config: ComponentConfig) {
+export function createComponentConfig(config: ComponentConfig) {
   return config
 }
 

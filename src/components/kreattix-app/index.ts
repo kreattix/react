@@ -1,2 +1,2 @@
 export { KreattixApp } from './KreattixApp'
-export { Provider, createComponent, useComponent } from './Provider'
+export { Provider, createComponentConfig, useComponent } from './Provider'

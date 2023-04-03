@@ -23,7 +23,9 @@
     "no-console": "warn",
     "camelcase": "error",
     "no-duplicate-imports": "error",
-    "no-unused-vars": "error"
+    "no-unused-vars": "error",
+    "sort-keys": "error",
+    "no-duplicate-case": "error"
   },
   "ignorePatterns": ["dist/**/*"],
   "settings": {
